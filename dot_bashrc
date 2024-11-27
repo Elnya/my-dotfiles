@@ -1,0 +1,21 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+export PATH=$HOME/.cargo/bin:$HOME/bin:$PATH
+
+# eza aliases
+alias ls="eza --icons -h --git --time-style long-iso "
+alias l="ls -laaF"
+alias la="ls -lAF"
+alias ll="ls -lF"
+alias lsa="ls -laaF"
