@@ -13,6 +13,12 @@ fi
 
 export PATH=$HOME/.cargo/bin:$HOME/bin:$PATH
 
+if [[ $(whoami) = 'maria' ]]; then
+	if [[ -f /envcomm/profile.maria ]]; then
+		source /envcomm/profile.maria
+	fi	
+fi
+
 # eza aliases
 alias ls="eza --icons -h --git --time-style long-iso "
 alias l="ls -laaF"
