@@ -1,0 +1,11 @@
+# aliases
+alias rl8-pg-test='ssh root@10.10.10.3'
+alias ai-fx-test-rate='ssh root@10.10.10.5'
+alias rl8-benchmark='ssh root@10.10.10.6'
+
+# eza aliases
+alias ls="eza --icons -h --git --time-style long-iso "
+alias l="ls -laaF"
+alias la="ls -lAF"
+alias ll="ls -lF"
+alias lsa="ls -laaF"
