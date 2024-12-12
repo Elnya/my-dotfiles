@@ -23,9 +23,13 @@ fi
 alias ls="eza --icons -h --git --time-style long-iso "
 alias l="ls -laaF"
 alias la="ls -lAF"
-alias ll="ls -lF"
+alias ll="ls -lgF"
 alias lsa="ls -laaF"
 
 {{- if eq .chezmoi.hostname "dhlee-proxmox" }}
 source ~/.bashrc_debian
 {{- end}}
+
+# for sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
