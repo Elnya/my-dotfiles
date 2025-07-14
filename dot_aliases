@@ -9,3 +9,6 @@ alias l="ls -laaF"
 alias la="ls -lAF"
 alias ll="ls -lF"
 alias lsa="ls -laaF"
+
+# batcat (bat) aliases
+alias cat="batcat"
