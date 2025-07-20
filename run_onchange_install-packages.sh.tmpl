@@ -4,7 +4,7 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # install bat(cat)
-sudo apt install bat
+sudo apt install -y bat
 
 # install eza
 sudo apt update
@@ -17,11 +17,20 @@ sudo apt update
 sudo apt install -y eza
 
 # install oh-my-posh
-curl -s https://ohmyposh.dev/install.sh | bash -s
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
 
 # install neovim
-sudo apt install neovim
+sudo apt install -y ninja-build gettext cmake curl build-essential 
+git clone https://github.com/neovim/neovim
+git checkout stable
+cd neovim
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
 
-# install build-essential
-sudo apt install build-essential
+# install AstroNvim
+cd $HOME
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+nvim
+
 {{ end -}}
