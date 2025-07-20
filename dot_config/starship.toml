@@ -97,7 +97,7 @@ Unknown = " "
 Void = " "
 
 [directory]
-style = "fg:#2E2E2E bold"
+style = "bold white"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
