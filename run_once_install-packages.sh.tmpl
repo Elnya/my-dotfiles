@@ -16,8 +16,8 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 
-# install oh-my-posh
-curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
+# install starship
+curl -sS https://starship.rs/install.sh | sh
 
 # install neovim
 sudo apt install -y ninja-build gettext cmake curl build-essential 
