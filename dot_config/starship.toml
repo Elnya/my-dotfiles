@@ -97,7 +97,7 @@ Unknown = " "
 Void = " "
 
 [directory]
-style = "bold white"
+style = "fg:#2E2E2E bold"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -188,9 +188,14 @@ symbol = " "
 style = "bg:#06969A"
 format = '[ $symbol ($version) ]($style)'
 
+[python]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol ($version) ]($style)'
+
 [time]
 disabled = false
 time_format = "%T" # Hour-minute-second format
-style = "bg:#FBB998"
+style = "bg:#FBB998 fg:#2E2E2E"
 format = '[⌚ $time ]($style)'
 
