@@ -11,7 +11,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export PATH=$HOME/.cargo/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:$PATH
 
 if [[ $(whoami) = 'maria' ]]; then
 	if [[ -f /envcomm/profile.maria ]]; then
