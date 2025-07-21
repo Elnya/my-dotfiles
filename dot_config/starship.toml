@@ -1,5 +1,5 @@
 format = """
-$battery\
+[](#E38294)\
 $username\
 $hostname\
 $os\
@@ -26,8 +26,10 @@ $python\
 [](fg:#06969A bg:#33658A)\
 $docker_context\
 [](fg:#33658A)
+$battery\
 $directory\
-$character"""
+$character
+"""
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
