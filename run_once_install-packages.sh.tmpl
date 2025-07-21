@@ -1,26 +1,35 @@
-{{ if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") -}}
+{{ if eq .chezmoi.os "Linux" }}
 #!/bin/sh
 # install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# install bat(cat)
-sudo apt install -y bat
-
-# install eza
-sudo apt update
-sudo apt install -y gpg
-sudo mkdir -p /etc/apt/keyrings
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
-echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
-sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-sudo apt update
-sudo apt install -y eza
-
 # install starship
 curl -sS https://starship.rs/install.sh | sh
 
-# install neovim
+# install rust and cargo
+curl https://sh.rustup.rs -sSf | sh
+
+# install eza
+cargo install eza
+
+# install bat
+cargo install --locked bat
+
+{{/* for ubuntu and debian */}}
+{{ if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") }}
+
+# install neovim build prerequisites
 sudo apt install -y ninja-build gettext cmake curl build-essential 
+
+{{/* for rocky linux and oracle linux */}}
+{{ else if or (eq .chezmoi.osRelease.id "rocky") (eq .chezmoi.osRelease.id "ol") }}
+
+# install neovim build prerequisites
+sudo dnf -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra
+
+{{ end -}}
+
+# install neovim
 git clone https://github.com/neovim/neovim
 git checkout stable
 cd neovim
