@@ -119,7 +119,7 @@ truncation_symbol = "…/"
 
 [[battery.display]]
 threshold = 100
-style = 'bold green'
+style = "bg:#E38294"
 
 [c]
 symbol = " "
