@@ -9,7 +9,7 @@ $time\
 [](fg:#F1FAEE bg:#A8DADC)\
 $git_branch\
 $git_status\
-[](fg:#A8DADC bg:#457B9D)\
+[](fg:#A8DADC bg:#2E2E2E)\
 $c\
 $elixir\
 $elm\
