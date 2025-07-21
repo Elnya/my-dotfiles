@@ -1,9 +1,9 @@
 format = """
 [](#E38294)\
+$os\
+[ ](bg:#E38294)\
 $username\
 $hostname\
-[ ](bg:#E38294)\
-$os\
 [ ](bg:#E38294)\
 [](bg:#FBB998 fg:#E38294)\
 $time\
