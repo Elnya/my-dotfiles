@@ -4,7 +4,6 @@ $username\
 $hostname\
 $os\
 $battery\
-[ ](bg:#E38294)\
 [](bg:#FBB998 fg:#E38294)\
 $time\
 [](fg:#FBB998 bg:#86BBD8)\
