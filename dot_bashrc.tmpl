@@ -26,8 +26,18 @@ alias la="ls -lAF"
 alias ll="ls -lgF"
 alias lsa="ls -laaF"
 
-# bat(cat) aliases
+{{/* for ubuntu and debian */}}
+{{ if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") }}
+
 alias cat="batcat"
+
+{{/* for rocky linux and oracle linux */}}
+{{ else if or (eq .chezmoi.osRelease.id "rocky") (eq .chezmoi.osRelease.id "ol") }}
+
+alias cat="bat"
+
+{{ end -}}
+
 
 # for sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
