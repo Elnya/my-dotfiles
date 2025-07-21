@@ -1,7 +1,6 @@
 format = """
 [](#E38294)\
 $os\
-[ ](bg:#E38294)\
 $username\
 $hostname\
 [ ](bg:#E38294)\
