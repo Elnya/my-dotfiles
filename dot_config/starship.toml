@@ -38,7 +38,7 @@ $character
 [hostname]
 ssh_only = false
 style = "bg:#E63946 fg:#2E2E2E bold"
-format = '[@](bg:#E63946 fg:#FF4500)[$hostname]($style)'
+format = '[@](bg:#E63946 fg:#F1FAEE)[$hostname]($style)'
 disabled = false
 
 # You can also replace your username with a neat symbol like   or disable this
