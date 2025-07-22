@@ -205,5 +205,5 @@ format = '[ $symbol ($version) ]($style)'
 disabled = false
 time_format = "%T" # Hour-minute-second format
 style = "bg:#F1FAEE fg:#2E2E2E"
-format = '[⌚ $time ]($style)'
+format = '[ $time ]($style)'
 
