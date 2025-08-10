@@ -1,14 +1,21 @@
-# aliases
-alias rl8-pg-test='ssh root@10.10.10.3'
-alias ai-fx-test-rate='ssh root@10.10.10.5'
-alias rl8-benchmark='ssh root@10.10.10.6'
-
 # eza aliases
 alias ls="eza --icons -h --git --time-style long-iso "
 alias l="ls -laaF"
 alias la="ls -lAF"
-alias ll="ls -lF"
+alias ll="ls -lgF"
 alias lsa="ls -laaF"
 
-# batcat (bat) aliases
+{{/* for ubuntu and debian */}}
+{{ if or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian") }}
+
 alias cat="batcat"
+
+{{/* for rocky linux and oracle linux */}}
+{{ else if or (eq .chezmoi.osRelease.id "rocky") (eq .chezmoi.osRelease.id "ol") }}
+
+alias cat="bat"
+
+{{ end -}}
+
+# llm-playground aliases
+alias llm-playground="ssh -i ~/.ssh/llm-playground-dhlee.pem dhlee@llm-playground"
