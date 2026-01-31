@@ -17,5 +17,12 @@ alias cat="bat"
 
 {{ end -}}
 
+{{ if eq .chezmoi.hostname "karoness-gram" }}
+
+alias pg14-start="docker start test-postgres-14"
+alias pg14="docker exec -it test-postgres-14 psql -h test-postgres-14 -U postgres -E"
+
+{{ end - }}
+
 # llm-playground aliases
 alias llm-playground="ssh -i ~/.ssh/llm-playground-dhlee.pem dhlee@llm-playground"
